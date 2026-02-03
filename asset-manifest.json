@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Tap-Tempo/static/css/main.b8559e34.css",
-    "main.js": "/Tap-Tempo/static/js/main.8338876d.js",
+    "main.css": "/Tap-Tempo/static/css/main.5bb62ea7.css",
+    "main.js": "/Tap-Tempo/static/js/main.0f0988a8.js",
     "static/js/453.fd2f0c4a.chunk.js": "/Tap-Tempo/static/js/453.fd2f0c4a.chunk.js",
     "index.html": "/Tap-Tempo/index.html",
-    "main.b8559e34.css.map": "/Tap-Tempo/static/css/main.b8559e34.css.map",
-    "main.8338876d.js.map": "/Tap-Tempo/static/js/main.8338876d.js.map",
+    "main.5bb62ea7.css.map": "/Tap-Tempo/static/css/main.5bb62ea7.css.map",
+    "main.0f0988a8.js.map": "/Tap-Tempo/static/js/main.0f0988a8.js.map",
     "453.fd2f0c4a.chunk.js.map": "/Tap-Tempo/static/js/453.fd2f0c4a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b8559e34.css",
-    "static/js/main.8338876d.js"
+    "static/css/main.5bb62ea7.css",
+    "static/js/main.0f0988a8.js"
   ]
 }
