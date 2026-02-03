@@ -2,7 +2,6 @@
 
 This repository is a small personal project to learn Javascript + React for the first time.
 
-
 ## Design
 
 The page uses a fixed array stack to record the last eight ms times between spacebar presses.

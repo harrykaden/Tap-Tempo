@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import './App.css';
+import "./App.css";
 function App() {
   const lastPressTime = useRef(null);
   const intervals = useRef([]);
   const [bpm, setBPM] = useState(null);
 
-  let lastEightDeltas = []
+  let lastEightDeltas = [];
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -19,16 +19,17 @@ function App() {
 
         if (delta > 2000) {
           lastEightDeltas = [];
-          setBPM(0)
+          setBPM(0);
         } else {
-          lastEightDeltas.unshift(delta)
+          lastEightDeltas.unshift(delta);
 
           if (lastEightDeltas.length > 7) {
-            lastEightDeltas.pop()
+            lastEightDeltas.pop();
           }
 
-          const average = array => array.reduce((a, b) => a + b) / array.length;
-          setBPM(Math.round(60000/average(lastEightDeltas)))
+          const average = (array) =>
+            array.reduce((a, b) => a + b) / array.length;
+          setBPM(Math.round(60000 / average(lastEightDeltas)));
         }
       }
 
@@ -42,29 +43,30 @@ function App() {
   return (
     <div className="app">
       <h1>Tap Tempo</h1>
-      <p>Press the space bar repeatedly.</p>
+      <p>Press the space bar repeatedly or enter a tempo below.</p>
 
+      <div>
+        <div>BPM</div>
+        <input
+          className="input"
+          value={bpm}
+          type="number"
+          onChange={(e) => setBPM(e.target.value)}
+        />
+      </div>
       {bpm ? (
         <div>
           <div>
-            <strong>Average Time Between Presses:</strong>{" "}
-            {bpm} BPM
+            <strong>1/4 Note:</strong> {(60000 / bpm).toFixed(2)} ms
           </div>
           <div>
-            <strong>1/4 Note ms:</strong>{" "}
-            {(60000/bpm).toFixed(2)}
+            <strong>1/8 Note:</strong> {(30000 / bpm).toFixed(2)} ms
           </div>
           <div>
-            <strong>1/8 Note ms:</strong>{" "}
-            {(30000/bpm).toFixed(2)}
+            <strong>1/16 Note:</strong> {(15000 / bpm).toFixed(2)} ms
           </div>
           <div>
-            <strong>1/16 Note ms:</strong>{" "}
-            {(15000/bpm).toFixed(2)}
-          </div>
-          <div>
-            <strong>1/32 Note ms:</strong>{" "}
-            {(7500/bpm).toFixed(2)}
+            <strong>1/32 Note:</strong> {(7500 / bpm).toFixed(2)} ms
           </div>
         </div>
       ) : (

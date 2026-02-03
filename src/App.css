@@ -4,9 +4,13 @@
 
 body {
   margin: 0;
-  background: radial-gradient(circle at top,  #8686f4, #1e1e2f);
+  background: radial-gradient(circle at top, #8686f4, #1e1e2f);
   color: #ffffff;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
 }
 
 .app {
@@ -18,8 +22,23 @@ body {
   text-align: center;
   padding: 2rem;
   display: "grid";
-  align-items: "center"; 
+  align-items: "center";
   justify-content: "center";
   padding: "2rem";
-  font-family: "sans-serif" 
+  font-family: "sans-serif";
+}
+
+.input {
+  color: #ffffff;
+  width: 100%;
+  max-width: 100px;
+  padding: 12px 14px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  outline: none;
+  transition: all 0.25s ease;
+  background: none;
+  margin-bottom: 25px;
+  text-align: center;
 }
