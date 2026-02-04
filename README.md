@@ -4,10 +4,8 @@ This repository is a small personal project to learn Javascript + React for the 
 
 ## Design
 
-The page uses a fixed array stack to record the last eight ms times between spacebar presses.
-Eight beats is two bars, and through testing holding eight at a time seems to stabalize the average
-bpm.
+The page uses a fixed-size stack to store the eight most recent time intervals (in milliseconds) between spacebar presses. Eight beats correspond to two musical bars, and testing showed that averaging over eight intervals provides a more stable BPM calculation.
 
-If the user waits more than two seconds between presses, the stack resets. Two seconds was
-chosen because the slowest tempo a human can count is around 33 bpm, and 2 seconds between beats
-comes out to 30 bpm.
+If the user pauses for more than two seconds between presses, the stack is reset. This threshold was selected because the slowest tempo a person can reasonably count is approximately 33 BPM; a two-second interval between beats corresponds to 30 BPM.
+
+This project was developed with assistance from ChatGPT. The core design and page functionality were manually implemented, with the language model used primarily to fill gaps in JavaScript knowledge and support specific implementation details.
